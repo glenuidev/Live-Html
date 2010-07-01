@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <!-- 
+       about: Live.html is used as an aid to quickly test proof of concept html in real time
+       author: Glen Cuthbertson
+       email:  dont.spam.g(at)gmail.com
+  -->
+  <head> 
+  	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+  	<title>Live HTML</title> 
+  	<!--link rel="stylesheet" href="http://static.jquery.com/files/rocker/css/reset.css" type="text/css" / --> 
+  	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script> 
+  	<link rel="shortcut icon" href="http://www.cisco.com/favicon.ico" type="image/x-icon"/>
+  	<script type="text/javascript">
+  	  jQuery(document).ready(function () {
+    	  jQuery("#text-entry").keyup(function (){
+    	    jQuery("#output").html(jQuery("#text-entry").val());
+    	  });
+  	  });
+  	</script>
+  	<style type="text/css">
+  	  body#host-page {
+  	    margin: 10px;
+  	    font-family: monospace;
+  	  }
+  	  h2#text-entry-title {
+  	    margin-top: 30px
+  	  }
+      div#output {
+        padding: 5px;
+      }
+  	</style> 
+  </head>
+  <body id="host-page">
+    <h2 id="text-entry-title">Type html into this box to render the code</h2>
+    <textarea rows="50" cols="80" id="text-entry">Start coding!</textarea>
+    <div style="position: absolute; left: 700px; top:0; border-left: 1px dashed #ccc; height: 100%; padding-left: 10px;">
+      <h1 id="output-title">Output:</h1>
+      <div id="output">Hello World!</div>
+    </div>
+  </body>
+</html>
